@@ -1,0 +1,3 @@
+module "configs" {
+  source = "../config"
+}
