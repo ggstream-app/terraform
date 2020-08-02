@@ -32,60 +32,60 @@ variable "edgeNodes" {
   }))
 
   default = {
-    # "cac" = {
-    #   location   = "cac"
-    #   azLocation = "canadacentral"
-    #   name       = "Canada Central"
-    #   region     = "na"
-    # },
-    # "cus" = {
-    #   location   = "cus"
-    #   azLocation = "centralus"
-    #   name       = "Central US"
-    #   region     = "na"
-    # },
-    # "eus" = {
-    #   location   = "eus"
-    #   azLocation = "eastus"
-    #   name       = "East US"
-    #   region     = "na"
-    # },
-    # "scus" = {
-    #   location   = "scus"
-    #   azLocation = "southcentralus"
-    #   name       = "South Central US"
-    #   region     = "na"
-    # },
-    # "wus" = {
-    #   location   = "wus"
-    #   azLocation = "westus"
-    #   name       = "West US"
-    #   region     = "na"
-    # },
-    # "neu" = {
-    #   location   = "neu"
-    #   azLocation = "northeurope"
-    #   name       = "North Europe"
-    #   region     = "eu"
-    # },
-    # "weu" = {
-    #   location   = "weu"
-    #   azLocation = "westeurope"
-    #   name       = "West Europe"
-    #   region     = "eu"
-    # },
-    # "jpe" = {
-    #   location   = "jpe"
-    #   azLocation = "japaneast"
-    #   name       = "Japan East"
-    #   region     = "asia"
-    # },
-    # "seasia" = {
-    #   location   = "seasia"
-    #   azLocation = "southeastasia"
-    #   name       = "Southeast Asia"
-    #   region     = "asia"
-    # }
+    "cac" = {
+      location   = "cac"
+      azLocation = "canadacentral"
+      name       = "Canada Central"
+      region     = "na"
+    },
+    "cus" = {
+      location   = "cus"
+      azLocation = "centralus"
+      name       = "Central US"
+      region     = "na"
+    },
+    "eus" = {
+      location   = "eus"
+      azLocation = "eastus"
+      name       = "East US"
+      region     = "na"
+    },
+    "scus" = {
+      location   = "scus"
+      azLocation = "southcentralus"
+      name       = "South Central US"
+      region     = "na"
+    },
+    "wus" = {
+      location   = "wus"
+      azLocation = "westus"
+      name       = "West US"
+      region     = "na"
+    },
+    "neu" = {
+      location   = "neu"
+      azLocation = "northeurope"
+      name       = "North Europe"
+      region     = "eu"
+    },
+    "weu" = {
+      location   = "weu"
+      azLocation = "westeurope"
+      name       = "West Europe"
+      region     = "eu"
+    },
+    "jpe" = {
+      location   = "jpe"
+      azLocation = "japaneast"
+      name       = "Japan East"
+      region     = "asia"
+    },
+    "seasia" = {
+      location   = "seasia"
+      azLocation = "southeastasia"
+      name       = "Southeast Asia"
+      region     = "asia"
+    }
   }
 }
 
