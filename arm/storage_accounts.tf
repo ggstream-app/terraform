@@ -9,7 +9,7 @@ resource "azurerm_storage_account" "edge" {
   account_replication_type = "LRS"
 
   tags = {
-    type        = "Edge"
+    type        = "edge"
     description = "Diagnostic Storage Account"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region

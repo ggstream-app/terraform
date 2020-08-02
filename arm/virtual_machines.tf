@@ -13,7 +13,7 @@ resource "azurerm_linux_virtual_machine" "edge" {
   ]
 
   tags = {
-    type        = "Edge"
+    type        = "edge"
     description = "Virtual Machine"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region

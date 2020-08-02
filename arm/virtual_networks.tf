@@ -7,7 +7,7 @@ resource "azurerm_virtual_network" "edge" {
   resource_group_name = azurerm_resource_group.edge[each.value.region].name
 
   tags = {
-    type        = "Edge"
+    type        = "edge"
     description = "Virtual Network"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region

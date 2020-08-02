@@ -57,7 +57,7 @@ resource "azurerm_resource_group" "edge" {
   location = each.value.azLocation
 
   tags = {
-    type        = "Edge"
+    type        = "edge"
     description = each.value.name
     region      = each.key
     wave        = each.value.wave
