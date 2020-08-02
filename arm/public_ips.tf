@@ -12,7 +12,7 @@ resource "azurerm_public_ip" "edge" {
     description = "Public IP"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 }
 

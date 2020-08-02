@@ -10,7 +10,7 @@ resource "azurerm_traffic_manager_profile" "ingest" {
     type        = "infra"
     description = "Traffic Manager"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 
   dns_config {
@@ -62,7 +62,7 @@ resource "azurerm_traffic_manager_profile" "svc" {
     type        = "infra"
     description = "Traffic Manager"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 
   dns_config {

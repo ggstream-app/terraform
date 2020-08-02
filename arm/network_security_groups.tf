@@ -10,7 +10,7 @@ resource "azurerm_network_security_group" "edge" {
     description = "Network Security Group"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 }
 

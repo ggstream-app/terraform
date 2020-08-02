@@ -17,7 +17,7 @@ resource "azurerm_linux_virtual_machine" "edge" {
     description = "Virtual Machine"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 
   admin_ssh_key {

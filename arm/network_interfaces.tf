@@ -10,7 +10,7 @@ resource "azurerm_network_interface" "edge" {
     description = "Network Interface Card"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 
   ip_configuration {

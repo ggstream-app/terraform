@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "edge" {
     description = "Diagnostic Storage Account"
     vm          = "ggstream-edge-${each.value.location}"
     region      = each.value.region
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 
   network_rules {

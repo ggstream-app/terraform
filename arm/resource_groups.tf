@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "docker" {
     description = "North America"
     type        = "Docker"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 }
 
@@ -26,7 +26,7 @@ resource "azurerm_resource_group" "monitor" {
     description = "North America"
     type        = "Monitoring (AI/LA)"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 }
 
@@ -42,7 +42,7 @@ resource "azurerm_resource_group" "traffic" {
     description = "North America"
     type        = "Traffic Manager"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 }
 
@@ -60,6 +60,6 @@ resource "azurerm_resource_group" "edge" {
     type        = "edge"
     description = each.value.name
     region      = each.key
-    wave        = each.value.wave
+    ring        = each.value.ring
   }
 }

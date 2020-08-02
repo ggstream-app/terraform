@@ -9,6 +9,6 @@ resource "azurerm_container_registry" "acr" {
     type        = "infra"
     description = "Container Registry"
     region      = "na"
-    wave        = 0
+    ring        = 0
   }
 }
