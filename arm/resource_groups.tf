@@ -48,7 +48,6 @@ resource "azurerm_resource_group" "traffic" {
 
 /**
  * Edge Region RGs
- * RGId: azurerm_resource_group.edge["{region}"].id
  */
 resource "azurerm_resource_group" "edge" {
   for_each = module.configs.edgeRegions
@@ -58,6 +57,23 @@ resource "azurerm_resource_group" "edge" {
 
   tags = {
     type        = "edge"
+    description = each.value.name
+    region      = each.key
+    ring        = each.value.ring
+  }
+}
+
+/**
+ * Origin Region RGs
+ */
+resource "azurerm_resource_group" "origin" {
+  for_each = module.configs.originRegions
+
+  name     = "ggstream-origin-${each.key}"
+  location = each.value.azLocation
+
+  tags = {
+    type        = "origin"
     description = each.value.name
     region      = each.key
     ring        = each.value.ring

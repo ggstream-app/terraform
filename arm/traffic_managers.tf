@@ -51,6 +51,20 @@ resource "azurerm_traffic_manager_endpoint" "ingest_ext" {
 }
 
 /**
+ * Ingest Endpoints - Origin Azure
+ */
+resource "azurerm_traffic_manager_endpoint" "ingest_az" {
+  for_each = module.configs.originNodes
+
+  name                = "origin-${each.value.location}"
+  resource_group_name = azurerm_resource_group.traffic.name
+  profile_name        = azurerm_traffic_manager_profile.ingest.name
+  type                = "azureEndpoints"
+  weight              = 100
+  target_resource_id  = azurerm_public_ip.origin[each.value.location].id
+}
+
+/**
  * Service Endpoint
  */
 resource "azurerm_traffic_manager_profile" "svc" {
@@ -105,7 +119,7 @@ resource "azurerm_traffic_manager_endpoint" "svc_ext" {
 /**
  * Service Endpoints - Edge Azure
  */
-resource "azurerm_traffic_manager_endpoint" "svc_az" {
+resource "azurerm_traffic_manager_endpoint" "svc_az_edge" {
   for_each = module.configs.edgeNodes
 
   name                = "edge-${each.value.location}"
@@ -114,4 +128,18 @@ resource "azurerm_traffic_manager_endpoint" "svc_az" {
   type                = "azureEndpoints"
   weight              = 100
   target_resource_id  = azurerm_public_ip.edge[each.value.location].id
+}
+
+/**
+ * Service Endpoints - Origin Azure
+ */
+resource "azurerm_traffic_manager_endpoint" "svc_az_origin" {
+  for_each = module.configs.originNodes
+
+  name                = "origin-${each.value.location}"
+  resource_group_name = azurerm_resource_group.traffic.name
+  profile_name        = azurerm_traffic_manager_profile.svc.name
+  type                = "azureEndpoints"
+  weight              = 100
+  target_resource_id  = azurerm_public_ip.origin[each.value.location].id
 }
