@@ -7,8 +7,8 @@ resource "azurerm_traffic_manager_profile" "ingest" {
   traffic_routing_method = "Weighted"
 
   tags = {
-    description = "North America"
-    type        = "Traffic Manager"
+    type        = "infra"
+    description = "Traffic Manager"
     region      = "na"
     wave        = 0
   }
@@ -59,8 +59,8 @@ resource "azurerm_traffic_manager_profile" "svc" {
   traffic_routing_method = "Performance"
 
   tags = {
-    description = "North America"
-    type        = "Traffic Manager"
+    type        = "infra"
+    description = "Traffic Manager"
     region      = "na"
     wave        = 0
   }
