@@ -4,4 +4,11 @@ resource "azurerm_container_registry" "acr" {
   location                 = azurerm_resource_group.docker.location
   sku                      = "Basic"
   admin_enabled            = true
+  
+  tags = {
+    description = "North America"
+    type        = "Container Registry"
+    region      = "na"
+    wave        = 0
+  }
 }

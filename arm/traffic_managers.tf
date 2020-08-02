@@ -6,6 +6,13 @@ resource "azurerm_traffic_manager_profile" "ingest" {
   resource_group_name    = azurerm_resource_group.traffic.name
   traffic_routing_method = "Weighted"
 
+  tags = {
+    description = "North America"
+    type        = "Traffic Manager"
+    region      = "na"
+    wave        = 0
+  }
+
   dns_config {
     relative_name = "ggstream-ingest"
     ttl           = 60
@@ -17,11 +24,6 @@ resource "azurerm_traffic_manager_profile" "ingest" {
     interval_in_seconds          = 30
     timeout_in_seconds           = 10
     tolerated_number_of_failures = 3
-  }
-
-  tags = {
-    description = "North America"
-    type        = "Traffic Manager"
   }
 }
 
@@ -56,6 +58,13 @@ resource "azurerm_traffic_manager_profile" "svc" {
   resource_group_name    = azurerm_resource_group.traffic.name
   traffic_routing_method = "Performance"
 
+  tags = {
+    description = "North America"
+    type        = "Traffic Manager"
+    region      = "na"
+    wave        = 0
+  }
+
   dns_config {
     relative_name = "ggstream-svc"
     ttl           = 60
@@ -67,11 +76,6 @@ resource "azurerm_traffic_manager_profile" "svc" {
     interval_in_seconds          = 30
     timeout_in_seconds           = 10
     tolerated_number_of_failures = 3
-  }
-
-  tags = {
-    description = "North America"
-    type        = "Traffic Manager"
   }
 }
 

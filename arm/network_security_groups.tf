@@ -4,6 +4,14 @@ resource "azurerm_network_security_group" "edge" {
   name                = "ggstream-edge-${each.value.location}-nsg"
   location            = each.value.azLocation
   resource_group_name = azurerm_resource_group.edge[each.value.region].name
+
+  tags = {
+    type        = "Edge"
+    description = "Network Security Group"
+    vm          = "ggstream-edge-${each.value.location}"
+    region      = each.value.region
+    wave        = each.value.wave
+  }
 }
 
 resource "azurerm_network_interface_security_group_association" "edge" {

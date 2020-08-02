@@ -6,6 +6,14 @@ resource "azurerm_public_ip" "edge" {
   location            = each.value.azLocation
   allocation_method   = "Static"
   domain_name_label   = "ggstream-edge-${each.value.location}"
+
+  tags = {
+    type        = "Edge"
+    description = "Public IP"
+    vm          = "ggstream-edge-${each.value.location}"
+    region      = each.value.region
+    wave        = each.value.wave
+  }
 }
 
 resource "cloudflare_record" "edge" {

@@ -5,6 +5,14 @@ resource "azurerm_network_interface" "edge" {
   location            = each.value.azLocation
   resource_group_name = azurerm_resource_group.edge[each.value.region].name
 
+  tags = {
+    type        = "Edge"
+    description = "Network Interface Card"
+    vm          = "ggstream-edge-${each.value.location}"
+    region      = each.value.region
+    wave        = each.value.wave
+  }
+
   ip_configuration {
     name                          = "ipconfig1"
     subnet_id                     = azurerm_subnet.edge[each.value.location].id

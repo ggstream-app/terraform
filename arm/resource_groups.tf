@@ -5,9 +5,12 @@
 resource "azurerm_resource_group" "docker" {
   name     = "ggstream-docker"
   location = "westus2"
+  
   tags = {
     description = "North America"
-    type   = "Docker"
+    type        = "Docker"
+    region      = "na"
+    wave        = 0
   }
 }
 
@@ -18,9 +21,12 @@ resource "azurerm_resource_group" "docker" {
 resource "azurerm_resource_group" "monitor" {
   name     = "ggstream-monitor"
   location = "westus2"
+
   tags = {
     description = "North America"
-    type   = "Monitoring (AI/LA)"
+    type        = "Monitoring (AI/LA)"
+    region      = "na"
+    wave        = 0
   }
 }
 
@@ -31,9 +37,12 @@ resource "azurerm_resource_group" "monitor" {
 resource "azurerm_resource_group" "traffic" {
   name     = "ggstream-tm"
   location = "westus2"
+
   tags = {
     description = "North America"
-    type   = "Traffic Manager"
+    type        = "Traffic Manager"
+    region      = "na"
+    wave        = 0
   }
 }
 
@@ -46,8 +55,11 @@ resource "azurerm_resource_group" "edge" {
 
   name     = "ggstream-edge-${each.key}"
   location = each.value.azLocation
+
   tags = {
-    type   = "Edge"
+    type        = "Edge"
     description = each.value.name
+    region      = each.key
+    wave        = each.value.wave
   }
 }

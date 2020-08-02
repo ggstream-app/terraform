@@ -8,6 +8,14 @@ resource "azurerm_storage_account" "edge" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
+  tags = {
+    type        = "Edge"
+    description = "Diagnostic Storage Account"
+    vm          = "ggstream-edge-${each.value.location}"
+    region      = each.value.region
+    wave        = each.value.wave
+  }
+
   network_rules {
     bypass = ["AzureServices"]
     default_action = "Allow"
