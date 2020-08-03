@@ -32,20 +32,20 @@ variable "originNodes" {
   }))
 
   default = {
-    # "wus2" = {
-    #   location   = "wus2"
-    #   azLocation = "westus2"
-    #   name       = "West US 2"
-    #   region     = "na"
-    #   ring       = 1
-    # },
-    # "frs" = {
-    #   location   = "frs"
-    #   azLocation = "francesouth"
-    #   name       = "France South"
-    #   region     = "eu"
-    #   ring       = 0
-    # }
+    "wus2" = {
+      location   = "wus2"
+      azLocation = "westus2"
+      name       = "West US 2"
+      region     = "na"
+      ring       = 1
+    },
+    "frs" = {
+      location   = "frs"
+      azLocation = "francesouth"
+      name       = "France South"
+      region     = "eu"
+      ring       = 0
+    }
   }
 }
 
