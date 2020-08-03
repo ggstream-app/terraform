@@ -11,7 +11,7 @@ variable "originRegions" {
   default = {
     "asia" = {
       name       = "Asia",
-      azLocation = "koreasouth"
+      azLocation = "koreacentral"
       ring       = 1
     },
     "na" = {
@@ -39,10 +39,10 @@ variable "originNodes" {
       region     = "na"
       ring       = 1
     },
-    "kos" = {
-      location   = "kos"
-      azLocation = "koreasouth"
-      name       = "Korea South"
+    "koc" = {
+      location   = "koc"
+      azLocation = "koreacentral"
+      name       = "Korea Central"
       region     = "asia"
       ring       = 0
     }
