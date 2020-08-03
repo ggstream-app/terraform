@@ -10,8 +10,8 @@ variable "originRegions" {
   }))
   default = {
     "asia" = {
-      name       = "Asia",
-      azLocation = "eastasia"
+      name       = "Europe",
+      azLocation = "frs"
       ring       = 1
     },
     "na" = {
@@ -32,20 +32,20 @@ variable "originNodes" {
   }))
 
   default = {
-    "ncus" = {
-      location   = "ncus"
-      azLocation = "northcentralus"
-      name       = "North Central US"
-      region     = "na"
-      ring       = 1
-    },
-    "easia" = {
-      location   = "easia"
-      azLocation = "eastasia"
-      name       = "East Asia"
-      region     = "asia"
-      ring       = 0
-    }
+    # "wus2" = {
+    #   location   = "wus2"
+    #   azLocation = "westus2"
+    #   name       = "West US 2"
+    #   region     = "na"
+    #   ring       = 1
+    # },
+    # "frs" = {
+    #   location   = "frs"
+    #   azLocation = "francesouth"
+    #   name       = "France South"
+    #   region     = "eu"
+    #   ring       = 0
+    # }
   }
 }
 
