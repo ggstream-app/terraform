@@ -9,9 +9,9 @@ variable "originRegions" {
     ring        = number
   }))
   default = {
-    "eu" = {
-      name       = "Europe",
-      azLocation = "westeurope"
+    "asia" = {
+      name       = "Asia",
+      azLocation = "koreasouth"
       ring       = 1
     },
     "na" = {
@@ -39,11 +39,11 @@ variable "originNodes" {
       region     = "na"
       ring       = 1
     },
-    "frs" = {
-      location   = "frs"
-      azLocation = "francesouth"
-      name       = "France South"
-      region     = "eu"
+    "kos" = {
+      location   = "kos"
+      azLocation = "koreasouth"
+      name       = "Korea South"
+      region     = "asia"
       ring       = 0
     }
   }
