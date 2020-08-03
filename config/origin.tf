@@ -9,7 +9,7 @@ variable "originRegions" {
     ring        = number
   }))
   default = {
-    "asia" = {
+    "eu" = {
       name       = "Europe",
       azLocation = "westeurope"
       ring       = 1
