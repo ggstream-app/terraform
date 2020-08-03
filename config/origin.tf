@@ -9,16 +9,16 @@ variable "originRegions" {
     ring        = number
   }))
   default = {
-    "asia" = {
-      name       = "Asia",
-      azLocation = "koreacentral"
-      ring       = 1
-    },
-    "na" = {
-      name       = "North America"
-      azLocation = "westus2"
-      ring       = 1
-    }
+    # "asia" = {
+    #   name       = "Asia",
+    #   azLocation = "koreacentral"
+    #   ring       = 1
+    # },
+    # "na" = {
+    #   name       = "North America"
+    #   azLocation = "westus2"
+    #   ring       = 1
+    # }
   }
 }
 
