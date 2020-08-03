@@ -11,7 +11,7 @@ variable "originRegions" {
   default = {
     "asia" = {
       name       = "Europe",
-      azLocation = "francesouth"
+      azLocation = "westeurope"
       ring       = 1
     },
     "na" = {
