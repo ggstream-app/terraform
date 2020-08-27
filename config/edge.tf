@@ -44,19 +44,19 @@ variable "edgeNodes" {
       region     = "na"
       ring       = 1
     },
-    "cus" = {
-      location   = "cus"
-      azLocation = "centralus"
-      name       = "Central US"
-      region     = "na"
-      ring       = 1
-    },
-    "eus" = {
-      location   = "eus"
-      azLocation = "eastus"
-      name       = "East US"
-      region     = "na"
-      ring       = 1
+#    "cus" = {
+#      location   = "cus"
+#      azLocation = "centralus"
+#      name       = "Central US"
+#      region     = "na"
+#      ring       = 1
+#    },
+#    "eus" = {
+#      location   = "eus"
+#      azLocation = "eastus"
+#      name       = "East US"
+#      region     = "na"
+#      ring       = 1
     },
     "scus" = {
       location   = "scus"
@@ -72,13 +72,13 @@ variable "edgeNodes" {
       region     = "na"
       ring       = 1
     },
-    "neu" = {
-      location   = "neu"
-      azLocation = "northeurope"
-      name       = "North Europe"
-      region     = "eu"
-      ring       = 1
-    },
+#    "neu" = {
+#      location   = "neu"
+#      azLocation = "northeurope"
+#      name       = "North Europe"
+#      region     = "eu"
+#      ring       = 1
+#    },
     "weu" = {
       location   = "weu"
       azLocation = "westeurope"
@@ -86,13 +86,13 @@ variable "edgeNodes" {
       region     = "eu"
       ring       = 1
     },
-    "jpe" = {
-      location   = "jpe"
-      azLocation = "japaneast"
-      name       = "Japan East"
-      region     = "asia"
-      ring       = 1
-    },
+#    "jpe" = {
+#      location   = "jpe"
+#      azLocation = "japaneast"
+#      name       = "Japan East"
+#      region     = "asia"
+#      ring       = 1
+#    },
     "seasia" = {
       location   = "seasia"
       azLocation = "southeastasia"
